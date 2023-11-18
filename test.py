@@ -23,16 +23,11 @@ class ShoppingBasket:
 
         total_amount = 0
         for p in self.products:
-            print(p.name)
             temp = (p.unit_price * p.quantity) + (p.unit_price * p.quantity * (p.gst_percentage/100))
             if p.unit_price > 500 :
-                print("temp",temp)
                 total_amount += temp - (temp * 0.05)
-                print("total",total_amount)
             else :
-                print("temp",temp)
                 total_amount += temp
-                print("total",total_amount)
         return total_amount
 
 # Creating products in the basket
